@@ -1,0 +1,73 @@
+body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.container { width: 90%; max-width: 600px; }
+header { text-align: center; margin-bottom: 30px; }
+header h1 { color: #38bdf8; margin: 0; }
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    margin-bottom: 20px;
+}
+
+h2 { font-size: 1.2rem; color: #f8fafc; border-left: 4px solid #38bdf8; padding-left: 10px; margin-bottom: 20px; }
+
+.form-group { margin-bottom: 15px; }
+label { display: block; margin-bottom: 8px; font-size: 0.85rem; color: #94a3b8; }
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: white;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { background: #38bdf8; transform: translateY(-2px); }
+
+/* Layout Hasil dengan Foto */
+.result-card { border: 1px solid #38bdf8; background: #0c4a6e; }
+.result-flex { display: flex; gap: 20px; align-items: center; margin-top: 15px; }
+.result-content { flex: 2; }
+.result-photo { flex: 1; text-align: center; }
+.result-photo img { 
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    border: 2px solid #38bdf8; 
+}
+
+.result-content p { background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px; margin: 5px 0; }
+.result-content strong { color: #38bdf8; font-size: 0.75rem; display: block; }
+
+/* Styling Tabel */
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; padding: 12px; background: #0f172a; color: #38bdf8; font-size: 0.8rem; }
+td { padding: 12px; border-bottom: 1px solid #334155; font-size: 0.85rem; }
+.img-table { width: 50px; height: 50px; object-fit: cover; border-radius: 6px; }
