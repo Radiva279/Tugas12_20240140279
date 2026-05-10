@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presensi Ronda Malam - 20240140279</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌙 Presensi Ronda Malam</h1>
+            <p>Sistem Laporan Kehadiran Petugas Ronda</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Input Laporan</h2>
+                <form id="rondaForm">
+                    <div class="form-group">
+                        <label>Nama Petugas:</label>
+                        <input type="text" id="nama" required placeholder="Masukkan nama lengkap...">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Lokasi Pos:</label>
+                        <select id="posRonda" required>
+                            <option value="">-- Pilih Pos Tugas --</option>
+                            <option value="Pos Ronda RT 01">Pos Ronda RT 01</option>
+                            <option value="Pos Ronda RT 02">Pos Ronda RT 02</option>
+                            <option value="Pos Ronda RT 03">Pos Ronda RT 03</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Tugas:</label>
+                        <input type="date" id="tanggal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Unggah Bukti Foto (Selfie/Lokasi):</label>
+                        <input type="file" id="foto" accept="image/*" required>
+                    </div>
+
+                    <button type="submit">Kirim Laporan & Foto</button>
+                </form>
+            </section>
+
+            <section class="card result-card" id="outputArea" style="display: none;">
+                <div class="result-header">
+                    <h3 style="margin:0; color:#38bdf8;">✅ LAPORAN TERVALIDASI</h3>
+                </div>
+                <div class="result-flex">
+                    <div class="result-content">
+                        <p><strong>Nama:</strong> <span id="outNama"></span></p>
+                        <p><strong>Lokasi:</strong> <span id="outPos"></span></p>
+                        <p><strong>Tanggal:</strong> <span id="outTanggal"></span></p>
+                    </div>
+                    <div class="result-photo">
+                        <img id="outFoto" src="" alt="Bukti Foto">
+                    </div>
+                </div>
+            </section>
+
+            <section class="card table-card">
+                <h2>Riwayat Presensi Terbaru</h2>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Foto</th>
+                                <th>Nama</th>
+                                <th>Pos</th>
+                                <th>Tanggal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <footer style="text-align: center; margin-top: 20px; color: #64748b; font-size: 0.8rem; padding-bottom: 30px;">
+            &copy; 2026 Radiva Galih Nofriyanto - 20240140279
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
